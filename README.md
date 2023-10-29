@@ -32,7 +32,7 @@ ____________
 - Based on ESP12F "Programmable via pads on the PCB"
 - Input / Output
   - 1 x "LOCK" Solid State Relay "SSR" 2.4A 30v Max
-  - 1 x "BELL" Input Optocoupler 2-30v Max "For Doorbell"
+  - 1 x "BELL" Input Optocoupler 2-30v Max AC/DC "For Doorbell"
   - 1 x "ADC" Input 1v Max
   - 3 x GPIO "12,13,14"
   - 1 x GND
