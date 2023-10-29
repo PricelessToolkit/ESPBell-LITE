@@ -194,3 +194,47 @@ To upload the firmware into ESPBell-LITE you will need two things.
 
 
 ____________
+
+## Wiring diagram ESPBell-LITE to Intercom | Doorbell
+
+### _Intercom_
+<details>
+  <summary>Differences Between 4+N and 1+N Intercom Systems. Click here</summary>
+
+In the world of intercom systems, two common configurations stand out: 4+N and 1+N. Understanding the distinctions between these setups is crucial for successful installation and operation. Here's a quick overview:
+
+4+N Intercom Systems:
+
+In a 4+N system, the "4" signifies the presence of four distinct wires, each with a specific purpose.
+These four wires are typically allocated as follows: one for the microphone, one for the speaker, one for the doorbell, and one for the lock.
+Additionally, the "N" wire represents the neutral wire, which is used for the electrical current's return path.
+4+N systems offer separate wiring and control for microphone, speaker, doorbell, and lock functions.
+
+1+N Intercom Systems:
+
+In contrast, a 1+N system streamlines the wiring process by combining audio communication and power supply over a single wire.
+The "1" in 1+N indicates that one wire is used for both audio communication and power transmission.
+Like 4+N systems, the "N" wire in 1+N systems also stands for the neutral wire.
+1+N systems simplify wiring, using a single wire for audio and power, making installation more straightforward.
+
+
+</details>
+
+<details>
+  <summary>4+N Intercom System wiring diagram. Click here</summary>
+<img src="https://raw.githubusercontent.com/PricelessToolkit/ESPBell-LITE/main/img/x.png"/>
+</details>
+
+> [!NOTE]
+> Currently, only the 4+N Intercom system is supported by ESPBell-LITE. But if you want you can connect ESPBell-LITE to the unsupported intercom buttons directly!
+
+### _Doorbell_
+
+<details>
+  <summary>Dorbell wiring diagram. Click here</summary>
+<img src="https://raw.githubusercontent.com/PricelessToolkit/ESPBell-LITE/main/img/x.jpg"/>
+</details>
+
+> [!WARNING]
+> If there is current leakage between contacts 1 and 2 see "Dorbell wiring diagram" ESPBell-LITE will not work properly "The current flow may be due to the installed light bulb in the doorbell button which can trigger ESPBell-LITE early" So before you start it’s better to check it with a multimeter.
+
