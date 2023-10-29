@@ -35,7 +35,7 @@ ____________
   - 3 x GPIO "12,13,14"
   - 1 x GND
   - 1 x 5V "Input"
-- Status LEDs - Can be deactivated "PCB Jumper"
+- Status LEDs
   - 1 x DoorBell
   - 1 x On ESP module "Not used"
 - Button for flashing Firmware
@@ -64,5 +64,5 @@ ____________
 ## Schematic
 <details>
   <summary>View schematic. Click here</summary>
-<img src="https://raw.githubusercontent.com/PricelessToolkit/ESPBell-LITE/main/img/schematic.jpg"/>
+<img src="https://raw.githubusercontent.com/PricelessToolkit/ESPBell-LITE/main/PCB/schematic.jpg"/>
 </details>
