@@ -366,7 +366,7 @@ Like 4+N systems, the "N" wire in 1+N systems also stands for the neutral wire.
 
 <details>
   <summary>4+N Intercom System wiring diagram. Click here</summary>
-<img src="https://raw.githubusercontent.com/PricelessToolkit/ESPBell-LITE/main/img/x.png"/>
+<img src="https://raw.githubusercontent.com/PricelessToolkit/ESPBell-LITE/main/img/intercom_wiring.jpg"/>
 </details>
 
 > [!NOTE]
