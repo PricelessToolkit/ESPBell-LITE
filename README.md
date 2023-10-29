@@ -196,7 +196,141 @@ To upload the firmware into ESPBell-LITE you will need two things.
 ____________
 
 ## Home Assistant Configuration
+> [!NOTE]
+> After connection, Home Assistant will automatically  discover ESPBell-LITE sensors and switches.
+> - DoorBell | binary_sensor: ON / OFF
+> - Lock     | Toggle Switch
+> - uptime   | in in seconds
+> - Status   | Connected / Disconnected
+> - RSSI     | in dBm
+> - Restart  | Toggle Switch
+
+
+Here is a multi-user configuration example, which means that a notification is sent to several family members. If one family member clicks on the notification, the notification disappears from the other phones. For all this to work we need to create "three" automation, but before that, in this example, you need to change a minimum few things.
+- Image file path that is used as a background for Notification.
+- The name of the mobile device that is connected to the Home Assistant. In my case, it's "doogee_v20pro" and "Second_Phone"
+  
+```yaml
+  image: /media/local/notify/doorbell.jpg
+- service: notify.mobile_app_doogee_v20pro
+- service: notify.mobile_app_Second_Phone
+
+```
+
+
+### _Automation 1_
+This automation sends an interactive notification with the "tag: intercom" to phones.
+
+<details>
+  <summary>Explanation click here</summary>
 Soon...
+</details>
+
+```yaml
+alias: 🔔 Intercom DoorBell Notification
+description: ""
+trigger:
+  - platform: state
+    entity_id:
+      - binary_sensor.espbell_max_bell
+    to: "on"
+condition: []
+action:
+  - service: notify.mobile_app_doogee_v20pro
+    data:
+      message: Someone at the door
+      data:
+        persistent: true
+        importance: high
+        channel: intercom
+        tag: intercom
+        image: /media/local/notify/doorbell.jpg
+        actions:
+          - action: intercom_ignore
+            title: Ignore ✖
+          - action: intercom_open
+            title: Open The Door 🔓
+      title: DoorBell 🔔
+      message: Quelqu'un à la porte
+  - service: notify.mobile_app_Second_Phone
+    data:
+      message: Someone at the door
+      data:
+        persistent: true
+        importance: high
+        channel: intercom
+        tag: intercom
+        image: /media/local/notify/doorbell.jpg
+        actions:
+          - action: intercom_ignore
+            title: Ignore ✖
+          - action: intercom_open
+            title: Open The Door 🔓
+      title: DoorBell 🔔
+      message: Quelqu'un à la porte
+mode: single
+
+```
+
+### _Automation 2_
+This automation clears notifications with the "tag: intercom" on phones when an ignore button on the notification is pressed.
+
+<details>
+  <summary>Explanation click here</summary>
+Alias: The alias is a user-defined name or label for the automation, and in this case, it's named "🔔 Intercom DoorBell ignore notification Dismiss." This name suggests that the automation is related to dismissing or ignoring notifications for an intercom or doorbell event.
+
+Description: The description field is left empty, so there's no additional description provided for this automation.
+
+Trigger: This automation is triggered by an event. The trigger condition is defined as follows:
+
+platform: The trigger platform is "event," which means the automation will be triggered by an event.
+
+event_data: The automation will only trigger when the event data contains a specific action. In this case, the trigger event is looking for events with the action "intercom_ignore."
+
+event_type: The automation is tied to the "mobile_app_notification_action" event type. It implies that this automation is designed to respond to actions taken by the user within a mobile app notification.
+
+Condition: There are no additional conditions specified. This means the automation will proceed without any additional conditions beyond the trigger.
+
+Action: The action section specifies what should happen when the trigger condition is met. This automation has two actions:
+
+The first action uses the "notify.mobile_app_doogee_v20pro" service to send a notification with the message "clear_notification." It also includes data attributes with the "tag" set to "intercom." This effectively clears or dismisses the notification with the "intercom" tag on the "mobile_app_doogee_v20pro" mobile app.
+
+The second action is identical to the first but uses the "notify.mobile_app_Second_Phone" service to clear or dismiss the notification on another mobile device with the "intercom" tag.
+
+Mode: The mode is set to "single," which means that the automation will only run once for each trigger event. Subsequent trigger events with the "intercom_ignore" action will trigger this automation, but it will only clear the notification once.
+</details>
+
+```yaml
+alias: 🔔 Intercom DoorBell ignore notification Dismiss
+description: ""
+trigger:
+  - platform: event
+    event_data:
+      action: intercom_ignore
+    event_type: mobile_app_notification_action
+condition: []
+action:
+  - service: notify.mobile_app_doogee_v20pro
+    data:
+      message: clear_notification
+      data:
+        tag: intercom
+  - service: notify.mobile_app_Second_Phone
+    data:
+      message: clear_notification
+      data:
+        tag: intercom
+mode: single
+```
+
+### _Automation 3_
+This automatization enables the Relay and clears notifications with the "tag: intercom" on phones when the notification button is pressed on one of the phones.
+
+```yaml
+
+Soon...
+
+```
 
 ____________
 
