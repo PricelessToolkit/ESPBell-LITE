@@ -46,8 +46,9 @@ ____________
   - 1 x DoorBell
   - 1 x On ESP module "Not used"
 - Button for flashing Firmware
-- Requires 5V Power supply
 
+> [!NOTE]
+> Requires 5V DC power supply.
 ____________
 
 ## Before you start
@@ -201,24 +202,17 @@ To upload the firmware into ESPBell-LITE you will need two things.
 ____________
 
 ## Home Assistant Configuration
-> [!NOTE]
-> After connection, Home Assistant will automatically  discover ESPBell-LITE sensors and switches.
-> - DoorBell | binary_sensor ON / OFF
-> - Lock     | Toggle Switch
-> - uptime   | Sensor in seconds
-> - Status   | binary_sensor Connected / Disconnected
-> - RSSI     | Sensor in dBm
-> - Restart  | Toggle Switch
-
 
 Here is a multi-user configuration example, which means that a notification is sent to several family members. If one family member clicks on the notification, the notification disappears from the other phones. For all this to work we need to create "three" automation, but before that, in this example, you need to change a minimum few things.
 - Image file path that is used as a background for Notification.
 - The name of the mobile device that is connected to the Home Assistant. In my case, it's "doogee_v20pro" and "Second_Phone"
+- Entity id
   
 ```yaml
   image: /media/local/notify/doorbell.jpg
 - service: notify.mobile_app_doogee_v20pro
 - service: notify.mobile_app_Second_Phone
+- entity_id: switch.espbell_lite_lock
 
 ```
 
@@ -228,7 +222,21 @@ This automation sends an interactive notification with the "tag: intercom" to ph
 
 <details>
   <summary>Explanation click here</summary>
-Soon...
+  Alias: This is a user-defined name or label for the automation. In this case, it's given the name "🔔 Intercom DoorBell Notification," which suggests that it's related to receiving notifications for an intercom or doorbell event.
+
+Description: This field is left empty, so there's no additional description provided for this automation.
+
+Trigger: The trigger specifies the event or condition that will start the automation. In this case, it is triggered when the state of the "binary_sensor.espbell_lite_doorbell" changes to "on." This implies that the automation will run when the binary sensor named "binary_sensor.espbell_lite_doorbell" switches from an off state to an on state.
+
+Condition: There are no additional conditions specified. This means the automation will proceed without any additional conditions beyond the trigger.
+
+Action: The action section defines what should happen when the trigger condition is met. In this case, there are two actions defined:
+
+The first action uses the "notify.mobile_app_doogee_v20pro" service to send a notification to a mobile device. The notification includes a message "Someone at the door" and is configured with various data attributes, including a persistent notification, high importance, a specified channel ("intercom"), and a tag ("intercom"). It also includes an image file path for the notification and two actions that can be taken by the recipient: "Ignore ✖" and "Open The Door 🔓." The title and message of the notification are also specified in two languages (English and French).
+
+The second action is similar to the first but uses the "notify.mobile_app_Second_Phone" service to send the same notification to another mobile device.
+
+Mode: The mode is set to "single," which means that the automation will only run once for each trigger event. Subsequent trigger events will not cause the automation to run again until the current execution has been completed.
 </details>
 
 ```yaml
@@ -237,7 +245,7 @@ description: ""
 trigger:
   - platform: state
     entity_id:
-      - binary_sensor.espbell_max_bell
+      - binary_sensor.espbell_lite_doorbell
     to: "on"
 condition: []
 action:
@@ -333,7 +341,30 @@ This automatization enables the Relay and clears notifications with the "tag: in
 
 ```yaml
 
-Soon...
+alias: 🔔 intercom open the door and Dismiss notification
+description: ""
+trigger:
+  - platform: event
+    event_data:
+      action: intercom_open
+    event_type: mobile_app_notification_action
+condition: []
+action:
+  - service: notify.mobile_app_oneplus_a5010
+    data:
+      message: clear_notification
+      data:
+        tag: intercom
+  - service: notify.mobile_app_oneplus8t
+    data:
+      message: clear_notification
+      data:
+        tag: intercom
+  - service: switch.toggle
+    data: {}
+    target:
+      entity_id: switch.espbell_lite_lock
+mode: single
 
 ```
 
@@ -376,8 +407,8 @@ Like 4+N systems, the "N" wire in 1+N systems also stands for the neutral wire.
 
 <details>
   <summary>Dorbell wiring diagram. Click here</summary>
-<img src="https://raw.githubusercontent.com/PricelessToolkit/ESPBell-LITE/main/img/x.jpg"/>
+<img src="https://raw.githubusercontent.com/PricelessToolkit/ESPBell-LITE/main/img/doorbell_wiring.jpg"/>
 </details>
 
 > [!WARNING]
-> If there is current leakage between contacts 1 and 2 see "Dorbell wiring diagram" ESPBell-LITE will not work properly "The current flow may be due to the installed light bulb in the doorbell button which can trigger ESPBell-LITE early" So before you start it’s better to check it with a multimeter.
+> If there is current leakage between contacts 1 and 2 see "Dorbell wiring diagram" ESPBell-LITE may trigger randomly "The current flow may be due to the installed light bulb in the doorbell button which illuminates all the time" So before you start it’s better to check it with a multimeter.
