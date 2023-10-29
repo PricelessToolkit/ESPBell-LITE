@@ -16,6 +16,9 @@ ESPBell-LITE "IoT Intercom / Doorbell" module enables you to stay informed whene
 
 ### _Supported software and future plans_
 Currently supported `Home Assistant` and `ESPHome` If I have time I'll add control by `Telegram` and `WhatsApp`
+
+> [!NOTE]
+>  If you are ready to contribute to the project, I will be very happy. Due to lack of time, I can’t check the functionality quickly please don't change the original code, Create a new code/script in the Contributors_code Folder. Thank you very much!
 ____________
 ### Links
 
@@ -32,11 +35,11 @@ ____________
 - Based on ESP12F "Programmable via pads on the PCB"
 - Input / Output
   - 1 x "LOCK" Solid State Relay "SSR" 2.4A 30v Max
-  - 1 x "BELL" Input Optocoupler 2-30v Max "For Doorbell"
+  - 1 x "BELL" Input Optocoupler 2-30v AC/DC Max "For Doorbell"
   - 1 x "ADC" Input 1v Max
-  - 3 x GPIO "12,13,14"
+  - 3 x GPIO "12,13,14" 3.3v DC MAX
   - 1 x GND
-  - 1 x 5V "Input"
+  - 1 x 5V DC "Input"
 - Status LEDs
   - 1 x DoorBell
   - 1 x On ESP module "Not used"
