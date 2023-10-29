@@ -195,6 +195,11 @@ To upload the firmware into ESPBell-LITE you will need two things.
 
 ____________
 
+## Home Assistant Configuration
+Soon...
+
+____________
+
 ## Wiring diagram ESPBell-LITE to Intercom | Doorbell
 
 ### _Intercom_
@@ -237,8 +242,3 @@ Like 4+N systems, the "N" wire in 1+N systems also stands for the neutral wire.
 
 > [!WARNING]
 > If there is current leakage between contacts 1 and 2 see "Dorbell wiring diagram" ESPBell-LITE will not work properly "The current flow may be due to the installed light bulb in the doorbell button which can trigger ESPBell-LITE early" So before you start it’s better to check it with a multimeter.
-
-____________
-
-## Home Assistant Configuration
-Soon...
