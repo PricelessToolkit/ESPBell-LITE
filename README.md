@@ -15,7 +15,7 @@ ESPBell-LITE "IoT Intercom / Doorbell" module enables you to stay informed whene
 </details>
 
 ### _Supported software and future plans_
-Currently supported `Home Assistant` and `ESPHome` If I have time I'll add control by `Telegram`
+Currently supported `Home Assistant` and `ESPHome` If I have time I'll add control by `Telegram` and `WhatsApp`
 ____________
 ### Links
 
