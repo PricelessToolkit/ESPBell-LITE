@@ -15,7 +15,7 @@ ESPBell-LITE "IoT Intercom / Doorbell" module enables you to stay informed whene
 </details>
 
 ### _Supported software and future plans_
-Currently supported `Home Assistant` and `ESPhome` If I have time I'll add control by `Telegram`
+Currently supported `Home Assistant` and `ESPHome` If I have time I'll add control by `Telegram`
 ____________
 ### Links
 
@@ -71,9 +71,9 @@ ____________
 
 ____________
 
-## Uploading the ESPhome Firmware
+## Uploading the ESPHome Firmware
 > [!NOTE]
-> Ready-made boards already come with ESPhome firmware flashed, so you don't need to reprogram it via USB. All settings are done through WI-FI
+> Ready-made boards already come with ESPHome firmware flashed, so you don't need to reprogram it via USB. All settings are done through WI-FI
 
 To upload the firmware into ESPBell-LITE you will need two things.
 - Regular USB-TTL 3.3v adapter. I have [open-source USB-TTL](https://github.com/PricelessToolkit/UNIProg_Programmer) project, in case you don’t have a TTL adapter yet and want to assemble it yourself.
