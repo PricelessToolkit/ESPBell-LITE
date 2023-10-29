@@ -46,8 +46,9 @@ ____________
   - 1 x DoorBell
   - 1 x On ESP module "Not used"
 - Button for flashing Firmware
-- Requires 5V Power supply
 
+> [!NOTE]
+> Requires 5V DC power supply.
 ____________
 
 ## Before you start
