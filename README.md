@@ -376,7 +376,7 @@ Like 4+N systems, the "N" wire in 1+N systems also stands for the neutral wire.
 
 <details>
   <summary>Dorbell wiring diagram. Click here</summary>
-<img src="https://raw.githubusercontent.com/PricelessToolkit/ESPBell-LITE/main/img/x.jpg"/>
+<img src="https://raw.githubusercontent.com/PricelessToolkit/ESPBell-LITE/main/img/doorbell_wiring.jpg"/>
 </details>
 
 > [!WARNING]
