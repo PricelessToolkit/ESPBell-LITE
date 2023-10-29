@@ -205,11 +205,13 @@ ____________
 Here is a multi-user configuration example, which means that a notification is sent to several family members. If one family member clicks on the notification, the notification disappears from the other phones. For all this to work we need to create "three" automation, but before that, in this example, you need to change a minimum few things.
 - Image file path that is used as a background for Notification.
 - The name of the mobile device that is connected to the Home Assistant. In my case, it's "doogee_v20pro" and "Second_Phone"
+- Entity id
   
 ```yaml
   image: /media/local/notify/doorbell.jpg
 - service: notify.mobile_app_doogee_v20pro
 - service: notify.mobile_app_Second_Phone
+- entity_id: switch.espbell_lite_lock
 
 ```
 
