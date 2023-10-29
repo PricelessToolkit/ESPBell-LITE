@@ -54,7 +54,7 @@ ____________
 
 > [!WARNING]
 > I would strongly advise against attempting to assemble this PCB on your own if you have no experience "0%" in soldering, or working with ESP / Arduino boards.
-> Connecting ESPBell-MAX to your intercom or doorbell demands a certain level of electronics expertise and the proficiency to utilize a multimeter effectively. Please be aware that I cannot assume responsibility for any errors or issues that may arise. My role is to provide guidance and advice to the best of my abilities.
+> Connecting ESPBell-LITE to your intercom or doorbell demands a certain level of electronics expertise and the proficiency to utilize a multimeter effectively. Please be aware that I cannot assume responsibility for any errors or issues that may arise. My role is to provide guidance and advice to the best of my abilities.
 
 ____________
 
