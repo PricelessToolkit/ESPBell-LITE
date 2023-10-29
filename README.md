@@ -198,11 +198,11 @@ ____________
 ## Home Assistant Configuration
 > [!NOTE]
 > After connection, Home Assistant will automatically  discover ESPBell-LITE sensors and switches.
-> - DoorBell | binary_sensor: ON / OFF
+> - DoorBell | binary_sensor ON / OFF
 > - Lock     | Toggle Switch
-> - uptime   | in in seconds
-> - Status   | Connected / Disconnected
-> - RSSI     | in dBm
+> - uptime   | Sensor in seconds
+> - Status   | binary_sensor Connected / Disconnected
+> - RSSI     | Sensor in dBm
 > - Restart  | Toggle Switch
 
 
