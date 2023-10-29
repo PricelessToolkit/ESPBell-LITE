@@ -202,6 +202,7 @@ To upload the firmware into ESPBell-LITE you will need two things.
 ____________
 
 ## Home Assistant Configuration
+<img src="https://raw.githubusercontent.com/PricelessToolkit/ESPBell-LITE/main/img/sensors_ha.jpg"/>
 
 Here is a multi-user configuration example, which means that a notification is sent to several family members. If one family member clicks on the notification, the notification disappears from the other phones. For all this to work we need to create "three" automation, but before that, in this example, you need to change a minimum few things.
 - Image file path that is used as a background for Notification.
