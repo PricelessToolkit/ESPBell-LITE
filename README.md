@@ -338,7 +338,30 @@ This automatization enables the Relay and clears notifications with the "tag: in
 
 ```yaml
 
-Soon...
+alias: 🔔 intercom open the door and Dismiss notification
+description: ""
+trigger:
+  - platform: event
+    event_data:
+      action: intercom_open
+    event_type: mobile_app_notification_action
+condition: []
+action:
+  - service: notify.mobile_app_oneplus_a5010
+    data:
+      message: clear_notification
+      data:
+        tag: intercom
+  - service: notify.mobile_app_oneplus8t
+    data:
+      message: clear_notification
+      data:
+        tag: intercom
+  - service: switch.toggle
+    data: {}
+    target:
+      entity_id: switch.espbell_lite_lock
+mode: single
 
 ```
 
