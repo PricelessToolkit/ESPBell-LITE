@@ -11,7 +11,7 @@ Your subscription goes a long way in backing my work.
 ESPBell-LITE "IoT Intercom / Doorbell" module enables you to stay informed whenever someone rings your doorbell or presses the intercom button. Upon receiving an interactive notification, you have the convenience to either promptly open the door or choose to dismiss the alert by simply tapping the button within the notification. See the screenshot below.
 <details>
   <summary>Notification Screenshot</summary>
-<img src="https://raw.githubusercontent.com/PricelessToolkit/ESPBell-MAX/main/img/notification_m.jpg"/>
+<img src="https://raw.githubusercontent.com/PricelessToolkit/ESPBell-LITE/main/img/notification_m.jpg"/>
 </details>
 
 ### _Supported software and future plans_
@@ -20,7 +20,7 @@ Currently supported `Home Assistant` and `ESPHome` If I have time I'll add contr
 ### _Contributors_
 
 > [!NOTE]
->  If you're ready to contribute to the project, your support would be greatly appreciated. Due to time constraints, I may not be able to quickly verify new features functionality. Therefore, please refrain from making changes to the original code. Instead, create a new code/script in the 'Contributors_code' folder. Thank you very much!
+>  If you're ready to contribute to the project, your support would be greatly appreciated. Due to time constraints, I may not be able to quickly verify new "features" or completely new "code" functionality. Therefore, please refrain from making changes to the original code. Instead, create a new code/script in the 'Contributors_code' folder and use this [README_Contributors.md](https://github.com/PricelessToolkit/ESPBell-LITE/blob/main/Code/Contributors_code/README_Contributors.md) Thank you very much!
 ____________
 ### Links
 
@@ -64,7 +64,7 @@ ____________
 ____________
 
 ## PCB Assembly
-This project is open-source, allowing you to assemble ESPBell-MAX on your own. To simplify this process, I've provided an "Interactive HTML Boom File" located in the PCB folder. This interactive file helps you identify where to solder each component and polarity, reducing the chances of errors to a minimum. But if you don't feel confident in assembling it yourself, you can always opt to purchase a pre-assembled board from my [Shop](https://www.pricelesstoolkit.com)
+This project is open-source, allowing you to assemble ESPBell-LITE on your own. To simplify this process, I've provided an "Interactive HTML Boom File" located in the PCB folder. This interactive file helps you identify where to solder each component and polarity, reducing the chances of errors to a minimum. But if you don't feel confident in assembling it yourself, you can always opt to purchase a pre-assembled board from my [Shop](https://www.pricelesstoolkit.com)
 
 ____________
 
@@ -186,7 +186,7 @@ ____________
 
 To upload the firmware into ESPBell-LITE you will need two things.
 - Regular USB-TTL 3.3v adapter. I have [open-source USB-TTL](https://github.com/PricelessToolkit/UNIProg_Programmer) project, in case you don’t have a TTL adapter yet and want to assemble it yourself.
-- Pogo pin Clamp Fixture "single row 6 Pin 2.54mm spacing" or you can solder wires directly to ESPBell-MAX for programming.
+- Pogo pin Clamp Fixture "single row 6 Pin 2.54mm spacing" or you can solder wires directly to ESPBell-LITE for programming.
 
 ### _USB-TTL Wiring diagram_
 
