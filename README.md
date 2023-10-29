@@ -201,15 +201,6 @@ To upload the firmware into ESPBell-LITE you will need two things.
 ____________
 
 ## Home Assistant Configuration
-> [!NOTE]
-> After connection, Home Assistant will automatically  discover ESPBell-LITE sensors and switches.
-> - DoorBell | binary_sensor ON / OFF
-> - Lock     | Toggle Switch
-> - uptime   | Sensor in seconds
-> - Status   | binary_sensor Connected / Disconnected
-> - RSSI     | Sensor in dBm
-> - Restart  | Toggle Switch
-
 
 Here is a multi-user configuration example, which means that a notification is sent to several family members. If one family member clicks on the notification, the notification disappears from the other phones. For all this to work we need to create "three" automation, but before that, in this example, you need to change a minimum few things.
 - Image file path that is used as a background for Notification.
