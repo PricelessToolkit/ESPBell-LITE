@@ -71,6 +71,109 @@ ____________
 
 ____________
 
+## ESPHome YAML Configuration
+The beauty of ESPhome is in its simplicity, you just need to change one config the "Delay" time. After you click open in the notification it will keep the relay engaged until the delay has elapsed.
+
+```yaml
+
+# Door Lock Opener "Momentary Switch" Keeps SSR ON for 1.5s.
+  - platform: gpio
+    pin: 5
+    id: Lock
+    name: "Lock"
+    icon: "mdi:lock"
+    restore_mode: ALWAYS_OFF
+    on_turn_on:
+    - delay: 1500ms 
+    - switch.turn_off: Lock
+
+```
+
+_Full yaml_
+
+```yaml
+substitutions:
+  name: ESPBell-LITE
+
+esphome:
+  name: espbell-lite
+  name_add_mac_suffix: false
+  project:
+    name: pricelesstoolkit.espbell-lite
+    version: "1.0"
+
+esp8266:
+  board: esp12e
+
+
+dashboard_import:
+  package_import_url: github://PricelessToolkit/ESPBell-LITE/Code/ESPHome/espbell-lite.yaml@main
+  import_full_config: true
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "Eg3Bw0WXj3ShNV3sN11dfOj+0UmBdF7irFaCnDnZpXk="
+
+ota:
+  password: "54699445e0aab07e709ffadssd188eb0"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  fast_connect: true
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "${name} Fallback Hotspot"
+    password: "password"
+
+captive_portal:
+
+sensor:
+
+- platform: uptime
+  name: "${name}"
+  id: uptime_seconds
+
+- platform: wifi_signal
+  name: "${name} WiFi Signal"
+
+binary_sensor:
+
+# Doorbell Sensor
+  - platform: gpio
+    pin:
+      number: 4
+      #inverted: true
+    name: "DoorBell"
+    icon: "mdi:bell"
+    filters:
+      delayed_on: 100ms
+
+  - platform: status
+    name: "${name} Status"
+
+switch:
+
+# Door Lock Opener "Momentary Switch" Keeps SSR ON for 1.5s.
+  - platform: gpio
+    pin: 5
+    id: Lock
+    name: "Lock"
+    icon: "mdi:lock"
+    restore_mode: ALWAYS_OFF
+    on_turn_on:
+    - delay: 1500ms 
+    - switch.turn_off: Lock
+
+  - platform: restart
+    name: ${name} restart
+```
+____________
 ## Uploading the ESPHome Firmware
 > [!NOTE]
 > Ready-made boards already come with ESPHome firmware flashed, so you don't need to reprogram it via USB. All settings are done through WI-FI.
