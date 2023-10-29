@@ -72,7 +72,7 @@ ____________
 ____________
 
 ## ESPHome YAML Configuration
-The beauty of ESPhome is in its simplicity, you just need to change one config the "Delay" time. After you click open in the notification it will keep the relay engaged until the delay has elapsed.
+The beauty of ESPHome is in its simplicity, you just need to change one config the "Delay" time. After you click open in the notification it will keep the relay engaged until the delay has elapsed.
 
 ```yaml
 
