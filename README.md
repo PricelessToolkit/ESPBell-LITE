@@ -66,3 +66,25 @@ ____________
   <summary>View schematic. Click here</summary>
 <img src="https://raw.githubusercontent.com/PricelessToolkit/ESPBell-LITE/main/PCB/schematic.jpg"/>
 </details>
+
+____________
+
+## Uploading the ESPhome Firmware
+> [!NOTE]
+> Ready-made boards already come with ESPhome firmware flashed, so you don't need to reprogram it via USB. All settings are done through WI-FI
+
+To upload the firmware into ESPBell-LITE you will need two things.
+- Regular USB-TTL 3.3v adapter. I have [open-source USB-TTL](https://github.com/PricelessToolkit/UNIProg_Programmer) project, in case you don’t have a TTL adapter yet and want to assemble it yourself.
+- Pogo pin Clamp Fixture "single row 6 Pin 2.54mm spacing" or you can solder wires directly to ESPBell-MAX for programming.
+
+### _USB-TTL Wiring diagram_
+
+| USB-TTL | ESPBell-MAX |
+| ------- | ----------- |
+| TX      | RX          |
+| RX      | TX          |
+| GND     | GND         |
+| 3.3v    | 3.3V        |
+
+
+____________
