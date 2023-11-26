@@ -24,12 +24,13 @@ Currently supported `Home Assistant` and `ESPHome` If I have time I'll add contr
 ____________
 ### Links
 
-- YouTube video [How To](https://www.youtube.com/@PricelessToolkit/videos)
+- YouTube video [How To](https://youtu.be/-lQ_mbuilic)
 - My Shop
   - [ESPBell-LITE](https://www.pricelesstoolkit.com)
   - [UNIProg Programmer](https://www.pricelesstoolkit.com/en/projects/33-uniprog-uartupdi-programmer-33v.html)
 - Aliexpress
-  - [Pogo pin Clamp Fixture](https://s.click.aliexpress.com/e/_DEHExUb)
+  - [Pogo pin Clamp](https://s.click.aliexpress.com/e/_DEHExUb)
+  - [Power Supply 5V 0.6A](https://s.click.aliexpress.com/e/_DDoIvRh)
 
 ____________
 
