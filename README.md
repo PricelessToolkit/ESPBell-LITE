@@ -189,7 +189,7 @@ ____________
 
 To upload the firmware into ESPBell-LITE you will need two things.
 - Regular USB-TTL 3.3v adapter. I have [open-source USB-TTL](https://github.com/PricelessToolkit/UNIProg_Programmer) project, in case you don’t have a TTL adapter yet and want to assemble it yourself.
-- Pogo pin Clamp Fixture [single row 6 Pin 2.54mm spacing](https://s.click.aliexpress.com/e/_DEHExUb) or you can solder wires directly to ESPBell-LITE for programming.
+- [Pogo pin Clamp Fixture single row 6 Pin 2.54mm spacing](https://s.click.aliexpress.com/e/_DEHExUb) or you can solder wires directly to ESPBell-LITE for programming.
 
 ### _USB-TTL Wiring diagram_
 
