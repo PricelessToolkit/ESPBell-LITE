@@ -49,12 +49,12 @@ ____________
 - Button for flashing Firmware
 
 > [!NOTE]
-> Requires 5V DC power supply.
+> Requires 5V 0.3A+ DC power supply.
 ____________
 
 ## Before you start
 > [!NOTE]
-> ✅ Please [check your Intercom type.](https://www.intercomsrus.com/finder/) It needs to be a 5 wire intercom system.
+> ✅ Please [check your Intercom type.](https://www.intercomsrus.com/finder/) It needs to be a 5-wire intercom system.
 > I hope that everything is crystal clear as I've made every effort to provide a step-by-step explanation of the setup process. If you have any further questions regarding the setup or require assistance with assembling a printed circuit board, feel free to join our [Facebook Group](https://www.facebook.com/groups/pricelesstoolkit) or open a new [discussion](https://github.com/PricelessToolkit/ESPBell-LITE/discussions) topic in the dedicated tab.
 
 > [!IMPORTANT]
