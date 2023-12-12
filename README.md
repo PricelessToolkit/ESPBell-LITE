@@ -24,12 +24,13 @@ Currently supported `Home Assistant` and `ESPHome` If I have time I'll add contr
 ____________
 ### Links
 
-- YouTube video [How To](https://www.youtube.com/@PricelessToolkit/videos)
+- YouTube video [How To](https://youtu.be/-lQ_mbuilic)
 - My Shop
   - [ESPBell-LITE](https://www.pricelesstoolkit.com)
   - [UNIProg Programmer](https://www.pricelesstoolkit.com/en/projects/33-uniprog-uartupdi-programmer-33v.html)
 - Aliexpress
-  - [Pogo pin Clamp Fixture](https://s.click.aliexpress.com/e/_DEHExUb)
+  - [Pogo pin Clamp 6Pin 2.54mm spacing](https://s.click.aliexpress.com/e/_DEHExUb)
+  - [Power Supply 5V 0.6A](https://s.click.aliexpress.com/e/_DDoIvRh)
 
 ____________
 
@@ -48,12 +49,13 @@ ____________
 - Button for flashing Firmware
 
 > [!NOTE]
-> Requires 5V DC power supply.
+> Requires 5V 0.3A+ DC power supply.
 ____________
 
 ## Before you start
 > [!NOTE]
-> I hope that everything is crystal clear as I've made every effort to provide a step-by-step explanation of the setup process. If you have any further questions regarding the setup or require assistance with assembling a printed circuit board, feel free to open a new discussion topic in the dedicated tab.
+> ✅ Please [check your Intercom type.](https://www.intercomsrus.com/finder/) It needs to be a 5-wire intercom system.
+> I hope that everything is crystal clear as I've made every effort to provide a step-by-step explanation of the setup process. If you have any further questions regarding the setup or require assistance with assembling a printed circuit board, feel free to join our [Facebook Group](https://www.facebook.com/groups/pricelesstoolkit) or open a new [discussion](https://github.com/PricelessToolkit/ESPBell-LITE/discussions) topic in the dedicated tab.
 
 > [!IMPORTANT]
 > If you're new to ESP-related matters, please refrain from asking basic questions like "how to program ESP8266". There are already plenty of excellent tutorials available on the internet. If you encounter any issues, remember that providing detailed information about the problem will help me offer more effective assistance. More information equals better help!
@@ -187,7 +189,7 @@ ____________
 
 To upload the firmware into ESPBell-LITE you will need two things.
 - Regular USB-TTL 3.3v adapter. I have [open-source USB-TTL](https://github.com/PricelessToolkit/UNIProg_Programmer) project, in case you don’t have a TTL adapter yet and want to assemble it yourself.
-- Pogo pin Clamp Fixture "single row 6 Pin 2.54mm spacing" or you can solder wires directly to ESPBell-LITE for programming.
+- [Pogo pin Clamp Fixture single row 6 Pin 2.54mm spacing](https://s.click.aliexpress.com/e/_DEHExUb) or you can solder wires directly to ESPBell-LITE for programming.
 
 ### _USB-TTL Wiring diagram_
 
