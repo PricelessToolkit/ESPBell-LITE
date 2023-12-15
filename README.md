@@ -26,7 +26,7 @@ ____________
 
 - YouTube video [How To](https://youtu.be/-lQ_mbuilic)
 - My Shop
-  - [ESPBell-LITE](https://www.pricelesstoolkit.com)
+  - [ESPBell-LITE](https://www.pricelesstoolkit.com/en/assembled-pcbs/38-espbell-lite-intercom-doorbell-module-0741049314450.html)
   - [UNIProg Programmer](https://www.pricelesstoolkit.com/en/projects/33-uniprog-uartupdi-programmer-33v.html)
 - Aliexpress
   - [Pogo pin Clamp 6Pin 2.54mm spacing](https://s.click.aliexpress.com/e/_DEHExUb)
