@@ -30,7 +30,7 @@ ____________
   - [UNIProg Programmer](https://www.pricelesstoolkit.com/en/projects/33-uniprog-uartupdi-programmer-33v.html)
 - Aliexpress
   - [Pogo pin Clamp 6Pin 2.54mm spacing](https://s.click.aliexpress.com/e/_DEHExUb)
-  - [Power Supply 5V 0.6A](https://s.click.aliexpress.com/e/_DDoIvRh)
+  - [Power Supply 5V 0.6A](https://s.click.aliexpress.com/e/_DDoIvRh) or any 5V power supply you have
 
 ____________
 
