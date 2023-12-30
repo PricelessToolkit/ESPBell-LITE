@@ -424,7 +424,7 @@ Experiencing WiFi disconnections with ESPBell-LITE? This usually indicates WiFi 
 
 Try these steps for a more stable connection:
  
-1. Update Firmware: Ensure both ESPHome and ESP boards are updated.
+1. Update Firmware: Ensure both ESPHome and ESPBell are updated.
 2. Check WiFi Environment: Use a WiFi analyzer to avoid crowded channels and ensure strong signal strength.
 3. Disable WiFi Power Saving: set "power_save_mode: none" in your ESPHome code.
 4. Disable Bandwidth Steering: Prevents automatic switching between 2.4GHz and 5GHz bands.
