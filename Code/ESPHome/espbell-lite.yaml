@@ -43,6 +43,7 @@ sensor:
 - platform: uptime
   name: "${name}"
   id: uptime_seconds
+  update_interval: 60
 
 - platform: wifi_signal
   name: "${name} WiFi Signal"
