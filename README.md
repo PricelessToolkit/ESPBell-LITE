@@ -426,7 +426,7 @@ Try these steps for a more stable connection:
  
 1. Update Firmware: Ensure both ESPHome and ESPBell are updated.
 2. Check WiFi Environment: Use a WiFi analyzer to avoid crowded channels and ensure strong signal strength.
-3. Disable WiFi Power Saving: set "power_save_mode: none" in your ESPHome code.
+3. Disable WiFi Power Saving: set "power_save_mode: none" in your ESPHome code. "only helps in some cases, in other it can make things worse"
 4. Disable Bandwidth Steering: Prevents automatic switching between 2.4GHz and 5GHz bands.
 5. Set Channel Bandwidth to 20MHz: This can improve stability in crowded WiFi areas.
 6. Use a Fixed WiFi Channel: Avoids interruptions from automatic channel changes.
