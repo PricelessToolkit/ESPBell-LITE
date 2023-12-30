@@ -420,7 +420,8 @@ ____________
 
 ## Troubleshooting
 
-Experiencing WiFi disconnections with ESPBell-LITE? This usually indicates WiFi network issues, not a defect in ESPBell-LITE itself.
+Experiencing WiFi disconnections with ESPBell-LITE? This usually indicates WiFi network issues.
+
 Try these steps for a more stable connection:
  
 1. Update Firmware: Ensure both ESPHome and ESP boards are updated.
