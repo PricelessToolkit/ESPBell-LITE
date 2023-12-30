@@ -415,3 +415,18 @@ Like 4+N systems, the "N" wire in 1+N systems also stands for the neutral wire.
 
 > [!WARNING]
 > If there is current leakage between contacts 1 and 2 see "Dorbell wiring diagram" ESPBell-LITE may trigger randomly "The current flow may be due to the installed light bulb in the doorbell button which illuminates all the time" So before you start it’s better to check it with a multimeter.
+
+
+## Troubleshooting
+
+Experiencing WiFi disconnections with ESPBell-LITE? This usually indicates WiFi network issues, not a defect in ESPBell-LITE itself.
+Try these steps for a more stable connection:
+ 
+1. Update Firmware: Ensure both ESPHome and ESP boards are updated.
+2. Check WiFi Environment: Use a WiFi analyzer to avoid crowded channels and ensure strong signal strength.
+3. Disable WiFi Power Saving: set "power_save_mode: none" in your ESPHome code.
+4. Disable Bandwidth Steering: Prevents automatic switching between 2.4GHz and 5GHz bands.
+5. Set Channel Bandwidth to 20MHz: This can improve stability in crowded WiFi areas.
+6. Use a Fixed WiFi Channel: Avoids interruptions from automatic channel changes.
+
+💡 Verify the maximum number of devices your WIFI Access Point can support. Different Access Points have varying limits for connected devices. The best practice is to use a separate access point for IoT devices for enhanced performance and security.
