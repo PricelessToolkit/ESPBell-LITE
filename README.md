@@ -429,5 +429,6 @@ Try these steps for a more stable connection:
 4. Disable Bandwidth Steering: Prevents automatic switching between 2.4GHz and 5GHz bands.
 5. Set Channel Bandwidth to 20MHz: This can improve stability in crowded WiFi areas.
 6. Use a Fixed WiFi Channel: Avoids interruptions from automatic channel changes.
+7. Official ESPHome workarounds https://esphome.io/guides/faq.html#my-node-keeps-reconnecting-randomly
 
 💡 Verify the maximum number of devices your WIFI Access Point can support. Different Access Points have varying limits for connected devices. The best practice is to use a separate access point for IoT devices for enhanced performance and security.
