@@ -184,8 +184,8 @@ switch:
 ____________
 ## Uploading the ESPHome Firmware
 > [!NOTE]
-> Ready-made boards already come with ESPHome firmware flashed, so you don't need to reprogram it via USB. All settings are done through WI-FI.
-> Just connect to the Hotspot `ESPBell-LITE Fallback Hotspot` through your mobile phone, the default password is `password`, and fill in your Wi-Fi Access Point credentials. After that notification will pop up in the ESPHome control panel, which will allow you to import the full configuration automatically.
+> Ready-made boards already come with ESPHome firmware flashed, so you probably don't need to reprogram it via USB.
+> Just connect to the Hotspot `ESPBell-LITE Fallback Hotspot` through your mobile phone, the default password is `password`, and fill in your Wi-Fi Access Point credentials. After that notification will pop up in the ESPHome control panel, which will allow you to import the full configuration automatically. If this does not work you need to upload the firmware via USB-TTL.
 
 To upload the firmware into ESPBell-LITE you will need two things.
 - Regular USB-TTL 3.3v adapter. I have [open-source USB-TTL](https://github.com/PricelessToolkit/UNIProg_Programmer) project, in case you don’t have a TTL adapter yet and want to assemble it yourself.
