@@ -207,12 +207,13 @@ ____________
 <img src="https://raw.githubusercontent.com/PricelessToolkit/ESPBell-LITE/main/img/sensors_ha.jpg"/>
 
 Here is a multi-user configuration example, which means that a notification is sent to several family members. If one family member clicks on the notification, the notification disappears from the other phones. For all this to work we need to create "three" automation, but before that, in this example, you need to change a minimum few things.
-- Image file path that is used as a background for Notification.
+- Image file path or snapshot from the camera that is used as a background for notification (mutually exclusive).
 - The name of the mobile device that is connected to the Home Assistant. In my case, it's "doogee_v20pro" and "Second_Phone"
 - Entity id
   
 ```yaml
   image: /media/local/notify/doorbell.jpg
+  image: /api/camera_proxy/camera.name
 - service: notify.mobile_app_doogee_v20pro
 - service: notify.mobile_app_Second_Phone
 - entity_id: switch.espbell_lite_lock
@@ -235,7 +236,7 @@ Condition: There are no additional conditions specified. This means the automati
 
 Action: The action section defines what should happen when the trigger condition is met. In this case, there are two actions defined:
 
-The first action uses the "notify.mobile_app_doogee_v20pro" service to send a notification to a mobile device. The notification includes a message "Someone at the door" and is configured with various data attributes, including a persistent notification, high importance, a specified channel ("intercom"), and a tag ("intercom"). It also includes an image file path for the notification and two actions that can be taken by the recipient: "Ignore ✖" and "Open The Door 🔓." The title and message of the notification are also specified in two languages (English and French).
+The first action uses the "notify.mobile_app_doogee_v20pro" service to send a notification to a mobile device. The notification includes a message "Someone at the door" and is configured with various data attributes, including a persistent notification, high importance, a specified channel ("intercom"), and a tag ("intercom"). It also includes an image file path or camera snapshot for the notification and two actions that can be taken by the recipient: "Ignore ✖" and "Open The Door 🔓".
 
 The second action is similar to the first but uses the "notify.mobile_app_Second_Phone" service to send the same notification to another mobile device.
 
@@ -254,12 +255,14 @@ condition: []
 action:
   - service: notify.mobile_app_doogee_v20pro
     data:
-      message: Someone at the door
       data:
         persistent: true
         importance: high
         channel: intercom
         tag: intercom
+        #Use this to add a snapshot of a camera
+        image: /api/camera_proxy/camera.name
+        #or this for a static image (mutually exclusive)
         image: /media/local/notify/doorbell.jpg
         actions:
           - action: intercom_ignore
@@ -267,15 +270,17 @@ action:
           - action: intercom_open
             title: Open The Door 🔓
       title: DoorBell 🔔
-      message: Quelqu'un à la porte
+      message: Someone at the door
   - service: notify.mobile_app_Second_Phone
     data:
-      message: Someone at the door
       data:
         persistent: true
         importance: high
         channel: intercom
         tag: intercom
+        #Use this to add a snapshot of a camera
+        image: /api/camera_proxy/camera.name
+        #or this for a static image (mutually exclusive)
         image: /media/local/notify/doorbell.jpg
         actions:
           - action: intercom_ignore
@@ -283,7 +288,7 @@ action:
           - action: intercom_open
             title: Open The Door 🔓
       title: DoorBell 🔔
-      message: Quelqu'un à la porte
+      message: Someone at the door
 mode: single
 
 ```
