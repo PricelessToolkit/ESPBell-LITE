@@ -381,7 +381,7 @@ ____________
 ## Wiring diagram ESPBell-LITE to Intercom | Doorbell
 
 > [!WARNING]
-> The cable colors do not follow the conventional scheme, so red is not "VCC 5V" and "black is 5V" Please refer to the silkscreen on the device!!! for the correct connections.
+> The cable colors do not follow the conventional scheme. Red is not VCC (5V); instead, black is the 5V line! Please refer to the silkscreen on the device for the correct connections.
 
 ### _Intercom_
 <details>
