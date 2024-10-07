@@ -24,6 +24,8 @@ api:
 
 ota:
 - platform: esphome
+  # For boards after around 2024-10-01:
+  #password: "password"
   password: "54699445e0aab07e709ffadssd188eb0"
 
 
