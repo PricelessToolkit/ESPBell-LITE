@@ -128,6 +128,8 @@ api:
 
 ota:
   password: "54699445e0aab07e709ffadssd188eb0"
+  # For boards after around 2024-10-01:
+  #password: "password"
 
 wifi:
   ssid: !secret wifi_ssid
