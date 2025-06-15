@@ -69,6 +69,13 @@ binary_sensor:
 
 switch:
 
+  - platform: gpio
+    pin: 2
+    id: LED
+    restore_mode: ALWAYS_OFF
+    inverted: True
+
+
 # Door Lock Opener "Momentary Switch" Keeps SSR ON for 1.5s.
   - platform: gpio
     pin: 5
@@ -77,8 +84,11 @@ switch:
     icon: "mdi:lock"
     restore_mode: ALWAYS_OFF
     on_turn_on:
+    - switch.turn_on: LED
     - delay: 1500ms 
     - switch.turn_off: Lock
+    - switch.turn_off: LED
+
 
   - platform: restart
     name: ${name} restart
