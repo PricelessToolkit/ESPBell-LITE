@@ -169,6 +169,13 @@ binary_sensor:
 
 switch:
 
+  - platform: gpio
+    pin: 2
+    id: LED
+    restore_mode: ALWAYS_OFF
+    inverted: True
+
+
 # Door Lock Opener "Momentary Switch" Keeps SSR ON for 1.5s.
   - platform: gpio
     pin: 5
@@ -177,11 +184,49 @@ switch:
     icon: "mdi:lock"
     restore_mode: ALWAYS_OFF
     on_turn_on:
+    - switch.turn_on: LED
     - delay: 1500ms 
     - switch.turn_off: Lock
+    - switch.turn_off: LED
+
 
   - platform: restart
     name: ${name} restart
+```
+> [!NOTE]
+> If you want a "Lock" entity instead of a "Switch" entity, you can use the example below. `Replace after line 169`
+
+```yaml
+
+switch:
+  - platform: gpio
+    pin: 5
+    id: lock_relay
+    restore_mode: ALWAYS_OFF
+
+  - platform: gpio
+    pin: 2
+    id: led_switch
+    inverted: true
+    restore_mode: ALWAYS_OFF
+
+  - platform: restart
+    name: ${name} restart
+
+lock:
+  - platform: template
+    name: ${name} Lock
+    id: ent_lock
+    icon: "mdi:lock"
+    optimistic: true
+    on_unlock:
+      - switch.turn_on: led_switch
+      - switch.turn_on: lock_relay
+      - delay: 1.5s                    # Change opening time here
+      - switch.turn_off: lock_relay
+      - switch.turn_off: led_switch
+      - lock.lock: ent_lock
+
 ```
 ____________
 ## Uploading the ESPHome Firmware
