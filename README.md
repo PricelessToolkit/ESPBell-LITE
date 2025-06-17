@@ -84,16 +84,7 @@ The beauty of ESPHome is in its simplicity, you just need to change one config t
 
 ```yaml
 
-# Door Lock Opener "Momentary Switch" Keeps SSR ON for 1.5s.
-  - platform: gpio
-    pin: 5
-    id: Lock
-    name: "Lock"
-    icon: "mdi:lock"
-    restore_mode: ALWAYS_OFF
-    on_turn_on:
-    - delay: 1500ms 
-    - switch.turn_off: Lock
+- delay: 1.5s # Change opening time here
 
 ```
 
