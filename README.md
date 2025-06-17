@@ -114,23 +114,23 @@ logger:
 
 # Enable Home Assistant API
 api:
-  encryption:
-    key: "Eg3Bw0WXj3ShNV3sN11dfOj+0UmBdF7irFaCnDnZpXk="
 
 ota:
-  password: "54699445e0aab07e709ffadssd188eb0"
-  # For boards after around 2024-10-01:
-  #password: "password"
+- platform: esphome
+  password: "password"
+
 
 wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password
   fast_connect: true
+  power_save_mode: none
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "${name} Fallback Hotspot"
     password: "password"
+    ap_timeout: 10s
 
 captive_portal:
 
@@ -139,6 +139,7 @@ sensor:
 - platform: uptime
   name: "${name}"
   id: uptime_seconds
+  update_interval: 60s
 
 - platform: wifi_signal
   name: "${name} WiFi Signal"
