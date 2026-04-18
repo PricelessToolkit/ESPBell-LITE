@@ -1,10 +1,23 @@
-<img src="https://raw.githubusercontent.com/PricelessToolkit/ESPBell-LITE/main/img/banner_1.jpg"/>
+<div align="center">
+  <img alt="CapiBridge"
+       src="img/banner_1.jpg?raw=true"
+       >
 
-🤗 Please consider subscribing to my [YouTube channel](https://www.youtube.com/@PricelessToolkit/videos)
-Your subscription goes a long way in backing my work.
+🤗 Please consider subscribing to my YouTube channel. Your subscription goes a long way toward supporting my work. If you would like to contribute even more, you can also buy me a coffee.
+  
+  [Shop](https://www.pricelesstoolkit.com) | [YouTube](https://www.youtube.com/watch?v=-lQ_mbuilic)
+  
+</div>
+<p align="center">
+  <a href="https://ko-fi.com/U6U2QLAF8">
+    <img src="https://ko-fi.com/img/githubbutton_sm.svg"/>
+  </a>
+</p>
 
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/U6U2QLAF8)
+
+____________
+
 
 
 # ESPBell-LITE and [ESPBell-MAX](https://github.com/PricelessToolkit/ESPBell-MAX)
